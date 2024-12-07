@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package hello;
+
+option go_package = "hello";
+
+
+enum HelloType {
+      HELLO_TYPE_UNSPECIFIED = 0; //未指定
+      HELLO_TYPE_ONE = 1; //one
+      HELLO_TYPE_TWO = 2; //two
+}
+
+service HelloService {
+    rpc Hello(HelloRequest) returns (HelloResponse) {}
+}
+
+
+message HelloRequest {
+
+}
+message HelloResponse {
+
+}
+
+
